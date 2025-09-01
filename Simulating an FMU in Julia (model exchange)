@@ -1,6 +1,6 @@
 using FMI
 using Plots
 
-fmu = fmiLoad("filelocation")
+fmu = fmiLoad("fmufilelocation")
 simData = fmiSimulate(fmu,(0.0,100.0);recordValues=["y]; type = :ME, solver = Tsit5())
 plot(simData)
